@@ -1,0 +1,1248 @@
+{
+  "info": {
+    "_postman_id": "88c3dead-7c00-40bb-9fd1-a13d0286dd15",
+    "name": "Take Home Test - CASE02 - Muhabby Mulya",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33167825"
+  },
+  "item": [
+    {
+      "name": "Petstore_SCN_001_TC_001",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_001_TC_002",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": ,\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_001_TC_003",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"abc\",\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_002_TC_001",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{pet_id}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{pet_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_002_TC_002",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/922337203685426",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "922337203685426"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_002_TC_003",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/92233720368542604771111",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "92233720368542604771111"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_002_TC_004",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/abc",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "abc"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_003_TC_001",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"tes available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet By Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status={{status}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "{{status}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_003_TC_002",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": 123\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet By Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status={{status}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "{{status}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_003_TC_003",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": 123\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Get Pet By Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=aabbcc",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "findByStatus"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "aabbcc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_004_TC_001",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Update Pet",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": {{pet_id}},\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"pet update\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_004_TC_002",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Update Pet",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"abc\",\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"pet update\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_005_TC_001",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Delete Pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{pet_id}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{pet_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_005_TC_002",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Delete Pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/abc",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "abc"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Petstore_SCN_005_TC_003",
+      "item": [
+        {
+          "name": "Test Post Pet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const jsonData = pm.response.json();",
+                  "const rawBody = pm.response.text();",
+                  "",
+                  "// Extract id as string to avoid JS float precision loss",
+                  "const match = rawBody.match(/\"id\"\\s*:\\s*(\\d+)/);",
+                  "const petId = match ? match[1] : String(jsonData.id);",
+                  "const status = String(jsonData.status);",
+                  "",
+                  "if (petId) {",
+                  "    console.log(petId);",
+                  "    pm.environment.set(\"pet_id\", petId);",
+                  "}",
+                  "",
+                  "if (status) {",
+                  "    console.log(status);",
+                  "    pm.environment.set(\"status\", status);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"create pet\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Delete Pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{pet_id}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{pet_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Test Delete Pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://petstore.swagger.io/v2/pet/{{pet_id}}",
+              "protocol": "https",
+              "host": [
+                "petstore",
+                "swagger",
+                "io"
+              ],
+              "path": [
+                "v2",
+                "pet",
+                "{{pet_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
