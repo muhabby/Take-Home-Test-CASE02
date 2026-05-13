@@ -6,7 +6,7 @@
 https://petstore.swagger.io/v2
 
 ## How to Import
-1. Download file petstore.postman_collection.json dan petstore.postman_environment.json
+1. Download file Take Home Test - CASE02 - Muhabby Mulya.postman_environment.json dan Take Home Test - CASE02 - Muhabby Mulya.postman_collection.json
 2. Buka Postman → Import → pilih 2 file tersebut
 
 ## How To Run
